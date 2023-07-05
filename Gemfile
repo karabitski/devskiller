@@ -7,10 +7,12 @@ gem 'puma'
 gem 'rails'
 gem 'rubocop-rails', require: false
 gem 'sqlite3'
+gem 'enumerize'
 
 group :development do
   gem 'listen'
   gem 'spring'
+  gem 'byebug'
 end
 
 group :test do
