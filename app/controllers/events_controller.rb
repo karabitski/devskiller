@@ -5,7 +5,7 @@ class EventsController < ApplicationController
     begin
       event = Event.modify_timestamp_and_save! events_params
       render json: event
-    rescue ActiveRecord::RecordInvalid, ActionController::ParameterMissing => e
+    rescue ActiveRecord::RecordInvalid, ActionController::ParameterMissing, ArgumentError => e
       render json: { result: '400 Bad Request' }, status: 400
     end
   end
